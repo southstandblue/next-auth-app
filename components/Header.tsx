@@ -1,4 +1,4 @@
-import { Show, UserButton } from "@clerk/nextjs";
+import { Show, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 export default function Header() {
@@ -24,8 +24,8 @@ export default function Header() {
               <UserButton />
             </Show>
             <Show when="signed-out">
-              {/* <SignInButton /> */}
-              <Link href="/sign-in">Sign in</Link>
+              <SignInButton />
+              {/* <Link href="/sign-in">Sign in</Link> */}
             </Show>
           </ul>
         </nav>
