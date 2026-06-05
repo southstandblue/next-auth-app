@@ -60,6 +60,12 @@ export async function POST(req: NextRequest) {
   if (evt?.type === "user.created") {
     console.log("User created");
   }
+  if (evt?.type === "user.deleted") {
+    console.log("User deleted");
+  }
+  if (evt?.type === "user.updated") {
+    console.log("User updated");
+  }
 
   return new Response("", { status: 200 });
 }
